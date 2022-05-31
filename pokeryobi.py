@@ -1,13 +1,15 @@
-from flask import (Flask, render_template, request, session)
+from argparse import MetavarTypeHelpFormatter
+from re import A
+from flask import Flask, render_template, request, session
 import random
 import openpyxl
 import os
+
 
 app=Flask(__name__)
 
 key=os.urandom(21)
 app.secret_key=key
-
 
 H2=["heart",2]
 S2=["spead",2]
@@ -76,124 +78,60 @@ CA14=["clover",14]
 
 strdict={"H2":H2,"S2":S2,"D2":D2,"C2":C2,"H3":H3,"S3":S3,"D3":D3,"C3":C3,"H4":H4,"S4":S4,"D4":D4,"C4":C4,"H5":H5,"S5":S5,"D5":D5,"C5":C5,"H6":H6,"S6":S6,"D6":D6,"C6":C6,"H7":H7,"S7":S7,"D7":D7,"C7":C7,"H8":H8,"S8":S8,"D8":D8,"C8":C8,"H9":H9,"S9":S9,"D9":D9,"C9":C9,"H10":H10,"S10":S10,"D10":D10,"C10":C10,"H11":H11,"S11":S11,"D11":D11,"C11":C11,"H12":H12,"S12":S12,"D12":D12,"C12":C12,"H13":H13,"S13":S13,"D13":D13,"C13":C13,"HA14":HA14,"SA14":SA14,"DA14":DA14,"CA14":CA14}
 
-@app.route("/")
-def open():
-    List=list(range(1,1000000,3))
-    L=random.choice(List)
-    My=[1,2,3,4,5]
-    wb=openpyxl.load_workbook("card.xlsx")
-    ws=wb["card"]
-    s1="A{0}".format(L+1)
-    ws[s1]=0
-    s2="B{0}".format(L+1)
-    ws[s2]=0
-    for i in range(60):
-        ws.cell(L+2,i+1,value=0)
-    score=0
-    scoreC=0
-    a1="A{0}".format(L)
-    b1="B{0}".format(L)
-    c1="C{0}".format(L)
-    d1="D{0}".format(L)
-    e1="E{0}".format(L)
-    for i in range(60):
-        ws.cell(L+2,i+1,value=0)
-    ws[a1]=None
-    ws[b1]=None
-    ws[c1]=None
-    ws[d1]=None
-    ws[e1]=None
-    wb.save("card.xlsx")
-    session["L"]=L
-    session["My"]=My
-    return render_template("open.html")
+wb=openpyxl.load_workbook("card.xlsx")
+ws=wb["card"]
+ws.delete_rows(3)
+ws.delete_rows(1)
+ws["A2"]=0
+ws["B2"]=0
+wb.save("card.xlsx")
 
-@app.route("/start")
+My=[1,2,3,4,5]
+score=0
+scoreC=0
+@app.route("/")
 def start():
-    L=session.get("L")
-    My=session.get("My")
     wb=openpyxl.load_workbook("card.xlsx")
     ws=wb["card"]
     s=wb.worksheets[0]
-    a3="A{0}".format(L+2)
-    if ws[a3].value==0 or ws[a3].value==None:
+    if ws["A3"].value==0 or ws["A3"].value==None:
         xl1=list(strdict.keys())
         xl2=random.sample(xl1, len(xl1))
         for i in range(60):
-            ws.cell(L+2,i+1,value=0)
+            ws.cell(3,i+1,value=0)
         for i in range(0,len(xl2)):
-            ws.cell(L+2,i+1,value=xl2[i])
+            ws.cell(3,i+1,value=xl2[i])
         wb.save("card.xlsx")
     y=[]
-    a3="A{0}".format(L+2)
-    bz3="BZ{0}".format(L+2)
-    abz="{0}:{1}".format(a3,bz3)
-    for row in s[abz]:
+    for row in s["A3:BZ3"]:
         for col in row:
             if col.value==0 or col.value==None:
                 pass
             else:
                 y.append(col.value)
-    M=[]
     for i in range(5):
         m=y.pop()
-        M.append(m)
         My[i]=strdict[m]
-    My00=M[0]
-    My11=M[1]
-    My22=M[2]
-    My33=M[3]
-    My44=M[4]
-    a1="A{0}".format(L)
-    b1="B{0}".format(L)
-    c1="C{0}".format(L)
-    d1="D{0}".format(L)
-    e1="E{0}".format(L)
+    My00=None
+    My11=None
+    My22=None
+    My33=None
+    My44=None
     for i in range(60):
-        ws.cell(L+2,i+1,value=0)
+        ws.cell(3,i+1,value=0)
+    ws["A1"]=My00
+    ws["B1"]=My11
+    ws["C1"]=My22
+    ws["D1"]=My33
+    ws["E1"]=My44
     for i in range(0,len(y)):
-        ws.cell(L+2,i+1,value=y[i])
-    f1="F{0}".format(L)
-    g1="G{0}".format(L)
-    h1="H{0}".format(L)
-    i1="I{0}".format(L)
-    j1="J{0}".format(L)
-    ws[f1]=My00
-    ws[g1]=My11
-    ws[h1]=My22
-    ws[i1]=My33
-    ws[j1]=My44
-    ws[a1]=None
-    ws[b1]=None
-    ws[c1]=None
-    ws[d1]=None
-    ws[e1]=None
+        ws.cell(3,i+1,value=y[i])
     wb.save("card.xlsx")
     a=len(y)
     return render_template("start.html",My00=My00,My11=My11,My22=My22,My33=My33,My44=My44,a=a,y=y,m=m,My=My,My0=My[0],My1=My[1],My2=My[2],My3=My[3],My4=My[4],H2=H2,S2=S2,D2=D2,C2=C2,H3=H3,S3=S3,D3=D3,C3=C3,H4=H4,S4=S4,D4=D4,C4=C4,H5=H5,S5=S5,D5=D5,C5=C5,H6=H6,S6=S6,D6=D6,C6=C6,H7=H7,S7=S7,D7=D7,C7=C7,H8=H8,S8=S8,D8=D8,C8=C8,H9=H9,S9=S9,D9=D9,C9=C9,H10=H10,S10=S10,D10=D10,C10=C10,H11=H11,S11=S11,D11=D11,C11=C11,H12=H12,S12=S12,D12=D12,C12=C12,H13=H13,S13=S13,D13=D13,C13=C13,HA14=HA14,SA14=SA14,DA14=DA14,CA14=CA14)
 
 @app.route("/start1", methods=["POST"])
 def change():
-    L=session.get("L")
-    My=session.get("My")
-    wb=openpyxl.load_workbook("card.xlsx")
-    ws=wb["card"]
-    s=wb.worksheets[0]
-    a1="A{0}".format(L)
-    b1="B{0}".format(L)
-    c1="C{0}".format(L)
-    d1="D{0}".format(L)
-    e1="E{0}".format(L)
-    f1="F{0}".format(L)
-    g1="G{0}".format(L)
-    h1="H{0}".format(L)
-    i1="I{0}".format(L)
-    j1="J{0}".format(L)
-    My[0]=strdict[ws[f1].value]
-    My[1]=strdict[ws[g1].value]
-    My[2]=strdict[ws[h1].value]
-    My[3]=strdict[ws[i1].value]
-    My[4]=strdict[ws[j1].value]
     My00=None
     My11=None
     My22=None
@@ -204,91 +142,76 @@ def change():
     My22=request.form.get("My22")
     My33=request.form.get("My33")
     My44=request.form.get("My44")
+    wb=openpyxl.load_workbook("card.xlsx")
+    ws=wb["card"]
+    s=wb.worksheets[0]
     y=[]
-    a3="A{0}".format(L+2)
-    bz3="BZ{0}".format(L+2)
-    abz="{0}:{1}".format(a3,bz3)
-    for row in s[abz]:
+    for row in s["A3:AZ3"]:
         for col in row:
             if col.value==0 or col.value==None:
                 pass
             else:
                 y.append(col.value)
     if My00!=None:
-        ws[a1]=My00
+        ws["A1"]=My00
     if My11!=None:
-        ws[b1]=My11
+        ws["B1"]=My11
     if My22!=None:
-        ws[c1]=My22
+        ws["C1"]=My22
     if My33!=None:
-        ws[d1]=My33
-    if My44!=None:
-        ws[e1]=My44
-    My00=ws[a1].value
-    My11=ws[b1].value
-    My22=ws[c1].value
-    My33=ws[d1].value
-    My44=ws[e1].value
+        ws["D1"]=My33
+    if My44!=None:    
+        ws["E1"]=My44
+    My00=ws["A1"].value
+    My11=ws["B1"].value
+    My22=ws["C1"].value
+    My33=ws["D1"].value
+    My44=ws["E1"].value
     wb.save("card.xlsx")
     a=len(y)
     return render_template("start1.html",a=a,y=y,My00=My00,My11=My11,My22=My22,My33=My33,My44=My44,My0=My[0],My1=My[1],My2=My[2],My3=My[3],My4=My[4],H2=H2,S2=S2,D2=D2,C2=C2,H3=H3,S3=S3,D3=D3,C3=C3,H4=H4,S4=S4,D4=D4,C4=C4,H5=H5,S5=S5,D5=D5,C5=C5,H6=H6,S6=S6,D6=D6,C6=C6,H7=H7,S7=S7,D7=D7,C7=C7,H8=H8,S8=S8,D8=D8,C8=C8,H9=H9,S9=S9,D9=D9,C9=C9,H10=H10,S10=S10,D10=D10,C10=C10,H11=H11,S11=S11,D11=D11,C11=C11,H12=H12,S12=S12,D12=D12,C12=C12,H13=H13,S13=S13,D13=D13,C13=C13,HA14=HA14,SA14=SA14,DA14=DA14,CA14=CA14)
 
 @app.route("/result", methods=["POST"])
 def result():
-    L=session.get("L")
-    My=session.get("My")
     wb=openpyxl.load_workbook("card.xlsx")
     ws=wb["card"]
     s=wb.worksheets[0]
-    f1="F{0}".format(L)
-    g1="G{0}".format(L)
-    h1="H{0}".format(L)
-    i1="I{0}".format(L)
-    j1="J{0}".format(L)
-    My[0]=strdict[ws[f1].value]
-    My[1]=strdict[ws[g1].value]
-    My[2]=strdict[ws[h1].value]
-    My[3]=strdict[ws[i1].value]
-    My[4]=strdict[ws[j1].value]
     y=[]
-    a3="A{0}".format(L+2)
-    bz3="BZ{0}".format(L+2)
-    abz="{0}:{1}".format(a3,bz3)
-    for row in s[abz]:
+    for row in s["A3:AZ3"]:
         for col in row:
             if col.value==0 or col.value==None:
                 pass
             else:
-                y.append(col.value)
-    a1="A{0}".format(L)
-    b1="B{0}".format(L)
-    c1="C{0}".format(L)
-    d1="D{0}".format(L)
-    e1="E{0}".format(L)    
-    if ws[a1].value!=None:
+                y.append(col.value)    
+    cellA=ws["A1"]
+    cellB=ws["B1"]
+    cellC=ws["C1"]
+    cellD=ws["D1"]
+    cellE=ws["E1"]
+    if cellA.value!=None:
         My000=y.pop()
         My[0]=strdict[My000]
-        ws[a1]=None
-    if ws[b1].value!=None:
+        ws["A1"]=None
+    if cellB.value!=None:
         My111=y.pop()
         My[1]=strdict[My111]
-        ws[b1]=None
-    if ws[c1].value!=None:
+        ws["B1"]=None
+    if cellC.value!=None:
         My222=y.pop()
         My[2]=strdict[My222]
-        ws[c1]=None
-    if ws[d1].value!=None:
+        ws["C1"]=None
+    if cellD.value!=None:
         My333=y.pop()
         My[3]=strdict[My333]
-        ws[d1]=None
-    if ws[e1].value!=None:
+        ws["D1"]=None
+    if cellE.value!=None:
         My444=y.pop()
         My[4]=strdict[My444]
-        ws[e1]=None 
+        ws["E1"]=None 
     for i in range(60):
-        ws.cell(L+2,i+1,value=0)
+        ws.cell(3,i+1,value=0)
     for i in range(0,len(y)):
-        ws.cell(L+2,i+1,value=y[i])      
+        ws.cell(3,i+1,value=y[i])      
     result=request.form.get("result")
     syuruiM=[]
     suujiM=[]
@@ -364,9 +287,8 @@ def result():
         sc=10
     else:
         sc=0
-    a2="A{0}".format(L+1)
-    score=ws[a2].value+sc
-    ws[a2]=score
+    score=ws["A2"].value+sc
+    ws["A2"]=score
     dice=["ロイヤル","ストフラ","フォア","フル","フラッシュ","ストレート","スリー","ツー","ワン","ノー"]
     w=[154,1390,24000,14410,19650,39250,211280,475390,4225690,5011770]
     Cpu=random.choices(dice, k=1, weights=w)
@@ -390,31 +312,26 @@ def result():
         CpuT=10
     else:
         CpuT=0
-    b2="B{0}".format(L+1)
-    scoreC=ws[b2].value+CpuT
-    ws[b2]=scoreC
+    scoreC=ws["B2"].value+CpuT
+    ws["B2"]=scoreC
     wb.save("card.xlsx")
-    chosei=[10,11,12,13,14,15,16,17,18,19,20]
-    if len(y)>=random.choice(chosei):
+    if len(y)>=10:
         a=len(y)
-        return render_template("result.html",CpuT=CpuT,sc=sc,scoreC=ws[b2].value,score=ws[a2].value,y=y,a=a,suujiMS=suujiMS,result=result,My=My,fourcardM=fourcardM,fullhouseM=fullhouseM,threecardM=threecardM,twopairM=twopairM,onepairM=onepairM,nopairM=nopairM,syuruiM=syuruiM,suujiM=suujiM,My0=My[0],My1=My[1],My2=My[2],My3=My[3],My4=My[4],H2=H2,S2=S2,D2=D2,C2=C2,H3=H3,S3=S3,D3=D3,C3=C3,H4=H4,S4=S4,D4=D4,C4=C4,H5=H5,S5=S5,D5=D5,C5=C5,H6=H6,S6=S6,D6=D6,C6=C6,H7=H7,S7=S7,D7=D7,C7=C7,H8=H8,S8=S8,D8=D8,C8=C8,H9=H9,S9=S9,D9=D9,C9=C9,H10=H10,S10=S10,D10=D10,C10=C10,H11=H11,S11=S11,D11=D11,C11=C11,H12=H12,S12=S12,D12=D12,C12=C12,H13=H13,S13=S13,D13=D13,C13=C13,HA14=HA14,SA14=SA14,DA14=DA14,CA14=CA14)
+        return render_template("result.html",CpuT=CpuT,sc=sc,scoreC=ws["B2"].value,score=ws["A2"].value,y=y,a=a,suujiMS=suujiMS,result=result,My=My,fourcardM=fourcardM,fullhouseM=fullhouseM,threecardM=threecardM,twopairM=twopairM,onepairM=onepairM,nopairM=nopairM,syuruiM=syuruiM,suujiM=suujiM,My0=My[0],My1=My[1],My2=My[2],My3=My[3],My4=My[4],H2=H2,S2=S2,D2=D2,C2=C2,H3=H3,S3=S3,D3=D3,C3=C3,H4=H4,S4=S4,D4=D4,C4=C4,H5=H5,S5=S5,D5=D5,C5=C5,H6=H6,S6=S6,D6=D6,C6=C6,H7=H7,S7=S7,D7=D7,C7=C7,H8=H8,S8=S8,D8=D8,C8=C8,H9=H9,S9=S9,D9=D9,C9=C9,H10=H10,S10=S10,D10=D10,C10=C10,H11=H11,S11=S11,D11=D11,C11=C11,H12=H12,S12=S12,D12=D12,C12=C12,H13=H13,S13=S13,D13=D13,C13=C13,HA14=HA14,SA14=SA14,DA14=DA14,CA14=CA14)
     else:
-        return render_template("result2.html",CpuT=CpuT,sc=sc,scoreC=ws[b2].value,score=ws[a2].value,y=y,suujiMS=suujiMS,result=result,My=My,fourcardM=fourcardM,fullhouseM=fullhouseM,threecardM=threecardM,twopairM=twopairM,onepairM=onepairM,nopairM=nopairM,syuruiM=syuruiM,suujiM=suujiM,My0=My[0],My1=My[1],My2=My[2],My3=My[3],My4=My[4],H2=H2,S2=S2,D2=D2,C2=C2,H3=H3,S3=S3,D3=D3,C3=C3,H4=H4,S4=S4,D4=D4,C4=C4,H5=H5,S5=S5,D5=D5,C5=C5,H6=H6,S6=S6,D6=D6,C6=C6,H7=H7,S7=S7,D7=D7,C7=C7,H8=H8,S8=S8,D8=D8,C8=C8,H9=H9,S9=S9,D9=D9,C9=C9,H10=H10,S10=S10,D10=D10,C10=C10,H11=H11,S11=S11,D11=D11,C11=C11,H12=H12,S12=S12,D12=D12,C12=C12,H13=H13,S13=S13,D13=D13,C13=C13,HA14=HA14,SA14=SA14,DA14=DA14,CA14=CA14)
+        return render_template("result2.html",CpuT=CpuT,sc=sc,scoreC=ws["B2"].value,score=ws["A2"].value,y=y,suujiMS=suujiMS,result=result,My=My,fourcardM=fourcardM,fullhouseM=fullhouseM,threecardM=threecardM,twopairM=twopairM,onepairM=onepairM,nopairM=nopairM,syuruiM=syuruiM,suujiM=suujiM,My0=My[0],My1=My[1],My2=My[2],My3=My[3],My4=My[4],H2=H2,S2=S2,D2=D2,C2=C2,H3=H3,S3=S3,D3=D3,C3=C3,H4=H4,S4=S4,D4=D4,C4=C4,H5=H5,S5=S5,D5=D5,C5=C5,H6=H6,S6=S6,D6=D6,C6=C6,H7=H7,S7=S7,D7=D7,C7=C7,H8=H8,S8=S8,D8=D8,C8=C8,H9=H9,S9=S9,D9=D9,C9=C9,H10=H10,S10=S10,D10=D10,C10=C10,H11=H11,S11=S11,D11=D11,C11=C11,H12=H12,S12=S12,D12=D12,C12=C12,H13=H13,S13=S13,D13=D13,C13=C13,HA14=HA14,SA14=SA14,DA14=DA14,CA14=CA14)
 
 @app.route("/miinya", methods=["GET"])
 def miinya():
-    L=session.get("L")
     wb=openpyxl.load_workbook("card.xlsx")
     ws=wb["card"]
-    for i in range(60):
-        ws.cell(L+2,i+1,value=0)
-    a2="A{0}".format(L+1)
-    b2="B{0}".format(L+1)
-    ws[a2]=0
-    ws[b2]=0
+    ws.delete_rows(3)
+    ws.delete_rows(2)
+    ws["A2"]=0
+    ws["B2"]=0
     wb.save("card.xlsx")
     return render_template("miinya.html")
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="localhost", debug=True)
     
