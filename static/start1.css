@@ -1,0 +1,42 @@
+body{
+    background-image: url(https://pakutaso.cdn.rabify.me/shared/img/thumb/ERY86_akaibara20140512.jpg?d=1420);
+}
+h1{
+    text-align: center;
+    color: rgba(255, 154, 233, 0.8);
+}
+h2{
+    text-align: center;
+    color: rgba(4, 211, 97, 0.8);
+}
+table{
+    margin: auto;
+    color: rgba(223, 223, 223, 0.8);
+}
+form{
+    margin-left: 85px;
+}
+form img{
+    transition: 0.5s;
+    transform: rotateZ( 0deg );
+}
+form:hover img{
+    transform: rotateZ( 30deg )
+}
+div{
+    margin-left: 85px;
+}
+.RR2 img{
+    transition: 0.5s;
+    transform: rotateZ( 0deg );
+}
+.RR2:hover img{
+    transform: rotateZ( 360deg );
+}
+.RR3 img{
+    transition: 0.5s;
+    transform: rotateZ( 0deg );
+}
+.RR3:hover img{
+    transform: rotateZ( 360deg );
+}

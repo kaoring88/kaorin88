@@ -1,0 +1,19 @@
+<!DOCTYPE>
+<html lang="ja">
+    <body>
+    手札から入れ替えるカードを選んでね<br>
+        <h1>ようこそ！　ポーカーテーブルへ！</h1>
+        {% if My0==H2 %}
+            <form action="" method="GET" style="display: inline">
+                <button type="submit" name="My" value=H2><img src="../static/img/2heart.jpg"></button>
+            </form>
+        {% else %}
+            <form action="" method="GET" style="display: inline">
+                <button type="submit" name="My" value=H2><img src="../static/img/2spead.jpg"></button>
+            </form>
+        {% endif %}
+            <form action="result" method="POST" style="display: inline">
+                <input type="submit" name="soushin" value="送信">
+            </form>    
+    </body>
+</html>

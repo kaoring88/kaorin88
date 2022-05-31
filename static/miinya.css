@@ -1,0 +1,17 @@
+body{
+    background-image: url(https://pakutaso.cdn.rabify.me/shared/img/thumb/ERY86_akaibara20140512.jpg?d=1420);
+}
+h1{
+    text-align: center;
+    color: rgba(255, 154, 233, 0.8);
+}
+article{
+    margin: auto;
+    width: 500px;
+    border: 3mm ridge rgb(248,211,88);
+    padding: 10px;
+    background-color: rgba(250, 119, 185, 0.856)
+}
+p{
+    text-align: center;
+}

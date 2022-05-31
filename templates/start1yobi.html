@@ -1,0 +1,1061 @@
+<!DOCTYPE>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/start.css">
+    </head>
+    <body>
+        <h3>現在{{a}}枚</h3><br>
+        <h2>手札から入れ替えるカードを選んでね</h2><br>
+        <h1>ようこそ！　ポーカーテーブルへ！</h1>
+        {% if My0==H2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=H2><img src="../static/img/2heart.jpg"></button>
+            </form>
+        {% elif My0==S2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=S2><img src="../static/img/2spead.jpg"></button>
+            </form>
+        {% elif My0==D2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=D2><img src="../static/img/2daiya.jpg"></button>
+            </form>
+        {% elif My0==C2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C2><img src="../static/img/2clover.jpg"></button>
+            </form>
+        {% elif My0==H3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=H3><img src="../static/img/3heart.jpg"></button>
+            </form>
+        {% elif My0==S3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=S3><img src="../static/img/3spead.jpg"></button>
+            </form>
+        {% elif My0==D3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=D3><img src="../static/img/3daiya.jpg"></button>
+            </form>
+        {% elif My0==C3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C3><img src="../static/img/3clover.jpg"></button>
+            </form>
+        {% elif My0==H4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=H4><img src="../static/img/4heart.jpg"></button>
+            </form>
+        {% elif My0==S4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=S4><img src="../static/img/4spead.jpg"></button>
+            </form>
+        {% elif My0==D4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=D4><img src="../static/img/4daiya.jpg"></button>
+            </form>
+        {% elif My0==C4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C4><img src="../static/img/4clover.jpg"></button>
+            </form>
+        {% elif My0==H5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=H5><img src="../static/img/5heart.jpg"></button>
+            </form>
+        {% elif My0==S5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=S5><img src="../static/img/5spead.jpg"></button>
+            </form>
+        {% elif My0==D5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=D5><img src="../static/img/5daiya.jpg"></button>
+            </form>
+        {% elif My0==C5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C5><img src="../static/img/5clover.jpg"></button>
+            </form>
+        {% elif My0==H6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=H6><img src="../static/img/6heart.jpg"></button>
+            </form>
+        {% elif My0==S6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=S6><img src="../static/img/6spead.jpg"></button>
+            </form>
+        {% elif My0==D6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=D6><img src="../static/img/6daiya.jpg"></button>
+            </form>
+        {% elif My0==C6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C6><img src="../static/img/6clover.jpg"></button>
+            </form>
+        {% elif My0==H7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=H7><img src="../static/img/7heart.jpg"></button>
+            </form>
+        {% elif My0==S7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=S7><img src="../static/img/7spead.jpg"></button>
+            </form>
+        {% elif My0==D7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=D7><img src="../static/img/7daiya.jpg"></button>
+            </form>
+        {% elif My0==C7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C7><img src="../static/img/7clover.jpg"></button>
+            </form>
+        {% elif My0==H8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=H8><img src="../static/img/8heart.jpg"></button>
+            </form>
+        {% elif My0==S8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=S8><img src="../static/img/8spead.jpg"></button>
+            </form>
+        {% elif My0==D8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=D8><img src="../static/img/8daiya.jpg"></button>
+            </form>
+        {% elif My0==C8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C8><img src="../static/img/8clover.jpg"></button>
+            </form>
+        {% elif My0==H9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=H9><img src="../static/img/9heart.jpg"></button>
+            </form>
+        {% elif My0==S9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=S9><img src="../static/img/9spead.jpg"></button>
+            </form>
+        {% elif My0==D9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=D9><img src="../static/img/9daiya.jpg"></button>
+            </form>
+        {% elif My0==C9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C9><img src="../static/img/9clover.jpg"></button>
+            </form>
+        {% elif My0==H10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=H10><img src="../static/img/10heart.jpg"></button>
+            </form>
+        {% elif My0==S10%}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=S10><img src="../static/img/10spead.jpg"></button>
+            </form>
+        {% elif My0==D10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=D10><img src="../static/img/10daiya.jpg"></button>
+            </form>
+        {% elif My0==C10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C10><img src="../static/img/10clover.jpg"></button>
+            </form>
+        {% elif My0==H11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=H11><img src="../static/img/Jheart.jpg"></button>
+            </form>
+        {% elif My0==S11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=S11><img src="../static/img/Jspead.jpg"></button>
+            </form>
+        {% elif My0==D11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=D11><img src="../static/img/Jdaiya.jpg"></button>
+            </form>
+        {% elif My0==C11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C11><img src="../static/img/Jclover.jpg"></button>
+            </form>
+        {% elif My0==H12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=H12><img src="../static/img/Qheart.jpg"></button>
+            </form>
+        {% elif My0==S12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=S12><img src="../static/img/Qspead.jpg"></button>
+            </form>
+        {% elif My0==D12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=D12><img src="../static/img/Qdaiya.jpg"></button>
+            </form>
+        {% elif My0==C12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C12><img src="../static/img/Qclover.jpg"></button>
+            </form>
+        {% elif My0==H13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=H13><img src="../static/img/Kheart.jpg"></button>
+            </form>
+        {% elif My0==S13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=S13><img src="../static/img/Kspead.jpg"></button>
+            </form>
+        {% elif My0==D13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=D13><img src="../static/img/Kdaiya.jpg"></button>
+            </form>
+        {% elif My0==C13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C13><img src="../static/img/Kclover.jpg"></button>
+            </form>
+        {% elif My0==HA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=HA14><img src="../static/img/Aheart.jpg"></button>
+            </form>
+        {% elif My0==SA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=SA14><img src="../static/img/Aspead.jpg"></button>
+            </form>
+        {% elif My0==DA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=DA14><img src="../static/img/Adaiya.jpg"></button>
+            </form>
+        {% else %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My00" value=C14><img src="../static/img/Aclover.jpg"></button>
+            </form>
+        {% endif %}
+        {% if My1==H2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=H2><img src="../static/img/2heart.jpg"></button>
+            </form>
+        {% elif My1==S2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=S2><img src="../static/img/2spead.jpg"></button>
+            </form>
+        {% elif My1==D2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=D2><img src="../static/img/2daiya.jpg"></button>
+            </form>
+        {% elif My1==C2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=C2><img src="../static/img/2clover.jpg"></button>
+            </form>
+        {% elif My1==H3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=H3><img src="../static/img/3heart.jpg"></button>
+            </form>
+        {% elif My1==S3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=S3><img src="../static/img/3spead.jpg"></button>
+            </form>
+        {% elif My1==D3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=D3><img src="../static/img/3daiya.jpg"></button>
+            </form>
+        {% elif My1==C3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=C3><img src="../static/img/3clover.jpg"></button>
+            </form>
+        {% elif My1==H4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=H4><img src="../static/img/4heart.jpg"></button>
+            </form>
+        {% elif My1==S4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=S4><img src="../static/img/4spead.jpg"></button>
+            </form>
+        {% elif My1==D4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=D4><img src="../static/img/4daiya.jpg"></button>
+            </form>
+        {% elif My1==C4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=C4><img src="../static/img/4clover.jpg"></button>
+            </form>
+        {% elif My1==H5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=H5><img src="../static/img/5heart.jpg"></button>
+            </form>
+        {% elif My1==S5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=S5><img src="../static/img/5spead.jpg"></button>
+            </form>
+        {% elif My1==D5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=D5><img src="../static/img/5daiya.jpg"></button>
+            </form>
+        {% elif My1==C5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=C5><img src="../static/img/5clover.jpg"></button>
+            </form>
+        {% elif My1==H6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=H6><img src="../static/img/6heart.jpg"></button>
+            </form>
+        {% elif My1==S6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=S6><img src="../static/img/6spead.jpg"></button>
+            </form>
+        {% elif My1==D6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=D6><img src="../static/img/6daiya.jpg"></button>
+            </form>
+        {% elif My1==C6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=C6><img src="../static/img/6clover.jpg"></button>
+            </form>
+        {% elif My1==H7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=H7><img src="../static/img/7heart.jpg"></button>
+            </form>
+        {% elif My1==S7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=S7><img src="../static/img/7spead.jpg"></button>
+            </form>
+        {% elif My1==D7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=D7><img src="../static/img/7daiya.jpg"></button>
+            </form>
+        {% elif My1==C7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=C7><img src="../static/img/7clover.jpg"></button>
+            </form>
+        {% elif My1==H8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=H8><img src="../static/img/8heart.jpg"></button>
+            </form>
+        {% elif My1==S8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=S8><img src="../static/img/8spead.jpg"></button>
+            </form>
+        {% elif My1==D8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=D8><img src="../static/img/8daiya.jpg"></button>
+            </form>
+        {% elif My1==C8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=C8><img src="../static/img/8clover.jpg"></button>
+            </form>
+        {% elif My1==H9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=H9><img src="../static/img/9heart.jpg"></button>
+            </form>
+        {% elif My1==S9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=S9><img src="../static/img/9spead.jpg"></button>
+            </form>
+        {% elif My1==D9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=D9><img src="../static/img/9daiya.jpg"></button>
+            </form>
+        {% elif My1==C9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=C9><img src="../static/img/9clover.jpg"></button>
+            </form>
+        {% elif My1==H10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=H10><img src="../static/img/10heart.jpg"></button>
+            </form>
+        {% elif My1==S10%}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=S10><img src="../static/img/10spead.jpg"></button>
+            </form>
+        {% elif My1==D10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=D10><img src="../static/img/10daiya.jpg"></button>
+            </form>
+        {% elif My1==C10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=C10><img src="../static/img/10clover.jpg"></button>
+            </form>
+        {% elif My1==H11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=H11><img src="../static/img/Jheart.jpg"></button>
+            </form>
+        {% elif My1==S11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=S11><img src="../static/img/Jspead.jpg"></button>
+            </form>
+        {% elif My1==D11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=D11><img src="../static/img/Jdaiya.jpg"></button>
+            </form>
+        {% elif My1==C11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=C11><img src="../static/img/Jclover.jpg"></button>
+            </form>
+        {% elif My1==H12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=H12><img src="../static/img/Qheart.jpg"></button>
+            </form>
+        {% elif My1==S12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=S12><img src="../static/img/Qspead.jpg"></button>
+            </form>
+        {% elif My1==D12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=D12><img src="../static/img/Qdaiya.jpg"></button>
+            </form>
+        {% elif My1==C12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=C12><img src="../static/img/Qclover.jpg"></button>
+            </form>
+        {% elif My1==H13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=H13><img src="../static/img/Kheart.jpg"></button>
+            </form>
+        {% elif My1==S13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=S13><img src="../static/img/Kspead.jpg"></button>
+            </form>
+        {% elif My1==D13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=D13><img src="../static/img/Kdaiya.jpg"></button>
+            </form>
+        {% elif My1==C13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=C13><img src="../static/img/Kclover.jpg"></button>
+            </form>
+        {% elif My1==HA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=HA14><img src="../static/img/Aheart.jpg"></button>
+            </form>
+        {% elif My1==SA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=SA14><img src="../static/img/Aspead.jpg"></button>
+            </form>
+        {% elif My1==DA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=DA14><img src="../static/img/Adaiya.jpg"></button>
+            </form>
+        {% else %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My11" value=CA14><img src="../static/img/Aclover.jpg"></button>
+            </form>
+        {% endif %}
+        {% if My2==H2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=H2><img src="../static/img/2heart.jpg"></button>
+            </form>
+        {% elif My2==S2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=S2><img src="../static/img/2spead.jpg"></button>
+            </form>
+        {% elif My2==D2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=D2><img src="../static/img/2daiya.jpg"></button>
+            </form>
+        {% elif My2==C2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=C2><img src="../static/img/2clover.jpg"></button>
+            </form>
+        {% elif My2==H3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=H3><img src="../static/img/3heart.jpg"></button>
+            </form>
+        {% elif My2==S3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=S3><img src="../static/img/3spead.jpg"></button>
+            </form>
+        {% elif My2==D3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=D3><img src="../static/img/3daiya.jpg"></button>
+            </form>
+        {% elif My2==C3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=C3><img src="../static/img/3clover.jpg"></button>
+            </form>
+        {% elif My2==H4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=H4><img src="../static/img/4heart.jpg"></button>
+            </form>
+        {% elif My2==S4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=S4><img src="../static/img/4spead.jpg"></button>
+            </form>
+        {% elif My2==D4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=D4><img src="../static/img/4daiya.jpg"></button>
+            </form>
+        {% elif My2==C4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=C4><img src="../static/img/4clover.jpg"></button>
+            </form>
+        {% elif My2==H5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=H5><img src="../static/img/5heart.jpg"></button>
+            </form>
+        {% elif My2==S5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=S5><img src="../static/img/5spead.jpg"></button>
+            </form>
+        {% elif My2==D5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=D5><img src="../static/img/5daiya.jpg"></button>
+            </form>
+        {% elif My2==C5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=C5><img src="../static/img/5clover.jpg"></button>
+            </form>
+        {% elif My2==H6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=H6><img src="../static/img/6heart.jpg"></button>
+            </form>
+        {% elif My2==S6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=S6><img src="../static/img/6spead.jpg"></button>
+            </form>
+        {% elif My2==D6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=D6><img src="../static/img/6daiya.jpg"></button>
+            </form>
+        {% elif My2==C6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=C6><img src="../static/img/6clover.jpg"></button>
+            </form>
+        {% elif My2==H7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=H7><img src="../static/img/7heart.jpg"></button>
+            </form>
+        {% elif My2==S7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=S7><img src="../static/img/7spead.jpg"></button>
+            </form>
+        {% elif My2==D7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=D7><img src="../static/img/7daiya.jpg"></button>
+            </form>
+        {% elif My2==C7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=C7><img src="../static/img/7clover.jpg"></button>
+            </form>
+        {% elif My2==H8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=H8><img src="../static/img/8heart.jpg"></button>
+            </form>
+        {% elif My2==S8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=S8><img src="../static/img/8spead.jpg"></button>
+            </form>
+        {% elif My2==D8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=D8><img src="../static/img/8daiya.jpg"></button>
+            </form>
+        {% elif My2==C8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=C8><img src="../static/img/8clover.jpg"></button>
+            </form>
+        {% elif My2==H9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=H9><img src="../static/img/9heart.jpg"></button>
+            </form>
+        {% elif My2==S9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=S9><img src="../static/img/9spead.jpg"></button>
+            </form>
+        {% elif My2==D9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=D9><img src="../static/img/9daiya.jpg"></button>
+            </form>
+        {% elif My2==C9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=C9><img src="../static/img/9clover.jpg"></button>
+            </form>
+        {% elif My2==H10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=H10><img src="../static/img/10heart.jpg"></button>
+            </form>
+        {% elif My2==S10%}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=S10><img src="../static/img/10spead.jpg"></button>
+            </form>
+        {% elif My2==D10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=D10><img src="../static/img/10daiya.jpg"></button>
+            </form>
+        {% elif My2==C10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=C10><img src="../static/img/10clover.jpg"></button>
+            </form>
+        {% elif My2==H11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=H11><img src="../static/img/Jheart.jpg"></button>
+            </form>
+        {% elif My2==S11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=S11><img src="../static/img/Jspead.jpg"></button>
+            </form>
+        {% elif My2==D11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=D11><img src="../static/img/Jdaiya.jpg"></button>
+            </form>
+        {% elif My2==C11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=C11><img src="../static/img/Jclover.jpg"></button>
+            </form>
+        {% elif My2==H12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=H12><img src="../static/img/Qheart.jpg"></button>
+            </form>
+        {% elif My2==S12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=S12><img src="../static/img/Qspead.jpg"></button>
+            </form>
+        {% elif My2==D12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=D12><img src="../static/img/Qdaiya.jpg"></button>
+            </form>
+        {% elif My2==C12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=C12><img src="../static/img/Qclover.jpg"></button>
+            </form>
+        {% elif My2==H13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=H13><img src="../static/img/Kheart.jpg"></button>
+            </form>
+        {% elif My2==S13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=S13><img src="../static/img/Kspead.jpg"></button>
+            </form>
+        {% elif My2==D13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=D13><img src="../static/img/Kdaiya.jpg"></button>
+            </form>
+        {% elif My2==C13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=C13><img src="../static/img/Kclover.jpg"></button>
+            </form>
+        {% elif My2==HA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=HA14><img src="../static/img/Aheart.jpg"></button>
+            </form>
+        {% elif My2==SA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=SA14><img src="../static/img/Aspead.jpg"></button>
+            </form>
+        {% elif My2==DA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=DA14><img src="../static/img/Adaiya.jpg"></button>
+            </form>
+        {% else %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My22" value=CA14><img src="../static/img/Aclover.jpg"></button>
+            </form>
+        {% endif %}
+        {% if My3==H2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=H2><img src="../static/img/2heart.jpg"></button>
+            </form>
+        {% elif My3==S2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=S2><img src="../static/img/2spead.jpg"></button>
+            </form>
+        {% elif My3==D2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=D2><img src="../static/img/2daiya.jpg"></button>
+            </form>
+        {% elif My3==C2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=C2><img src="../static/img/2clover.jpg"></button>
+            </form>
+        {% elif My3==H3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=H3><img src="../static/img/3heart.jpg"></button>
+            </form>
+        {% elif My3==S3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=S3><img src="../static/img/3spead.jpg"></button>
+            </form>
+        {% elif My3==D3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=D3><img src="../static/img/3daiya.jpg"></button>
+            </form>
+        {% elif My3==C3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=C3><img src="../static/img/3clover.jpg"></button>
+            </form>
+        {% elif My3==H4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=H4><img src="../static/img/4heart.jpg"></button>
+            </form>
+        {% elif My3==S4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=S4><img src="../static/img/4spead.jpg"></button>
+            </form>
+        {% elif My3==D4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=D4><img src="../static/img/4daiya.jpg"></button>
+            </form>
+        {% elif My3==C4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=C4><img src="../static/img/4clover.jpg"></button>
+            </form>
+        {% elif My3==H5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=H5><img src="../static/img/5heart.jpg"></button>
+            </form>
+        {% elif My3==S5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=S5><img src="../static/img/5spead.jpg"></button>
+            </form>
+        {% elif My3==D5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=D5><img src="../static/img/5daiya.jpg"></button>
+            </form>
+        {% elif My3==C5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=C5><img src="../static/img/5clover.jpg"></button>
+            </form>
+        {% elif My3==H6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=H6><img src="../static/img/6heart.jpg"></button>
+            </form>
+        {% elif My3==S6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=S6><img src="../static/img/6spead.jpg"></button>
+            </form>
+        {% elif My3==D6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=D6><img src="../static/img/6daiya.jpg"></button>
+            </form>
+        {% elif My3==C6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=C6><img src="../static/img/6clover.jpg"></button>
+            </form>
+        {% elif My3==H7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=H7><img src="../static/img/7heart.jpg"></button>
+            </form>
+        {% elif My3==S7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=S7><img src="../static/img/7spead.jpg"></button>
+            </form>
+        {% elif My3==D7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=D7><img src="../static/img/7daiya.jpg"></button>
+            </form>
+        {% elif My3==C7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=C7><img src="../static/img/7clover.jpg"></button>
+            </form>
+        {% elif My3==H8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=H8><img src="../static/img/8heart.jpg"></button>
+            </form>
+        {% elif My3==S8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=S8><img src="../static/img/8spead.jpg"></button>
+            </form>
+        {% elif My3==D8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=D8><img src="../static/img/8daiya.jpg"></button>
+            </form>
+        {% elif My3==C8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=C8><img src="../static/img/8clover.jpg"></button>
+            </form>
+        {% elif My3==H9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=H9><img src="../static/img/9heart.jpg"></button>
+            </form>
+        {% elif My3==S9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=S9><img src="../static/img/9spead.jpg"></button>
+            </form>
+        {% elif My3==D9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=D9><img src="../static/img/9daiya.jpg"></button>
+            </form>
+        {% elif My3==C9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=C9><img src="../static/img/9clover.jpg"></button>
+            </form>
+        {% elif My3==H10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=H10><img src="../static/img/10heart.jpg"></button>
+            </form>
+        {% elif My3==S10%}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=S10><img src="../static/img/10spead.jpg"></button>
+            </form>
+        {% elif My3==D10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=D10><img src="../static/img/10daiya.jpg"></button>
+            </form>
+        {% elif My3==C10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=C10><img src="../static/img/10clover.jpg"></button>
+            </form>
+        {% elif My3==H11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=H11><img src="../static/img/Jheart.jpg"></button>
+            </form>
+        {% elif My3==S11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=S11><img src="../static/img/Jspead.jpg"></button>
+            </form>
+        {% elif My3==D11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=D11><img src="../static/img/Jdaiya.jpg"></button>
+            </form>
+        {% elif My3==C11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=C11><img src="../static/img/Jclover.jpg"></button>
+            </form>
+        {% elif My3==H12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=H12><img src="../static/img/Qheart.jpg"></button>
+            </form>
+        {% elif My3==S12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=S12><img src="../static/img/Qspead.jpg"></button>
+            </form>
+        {% elif My3==D12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=D12><img src="../static/img/Qdaiya.jpg"></button>
+            </form>
+        {% elif My3==C12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=C12><img src="../static/img/Qclover.jpg"></button>
+            </form>
+        {% elif My3==H13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=H13><img src="../static/img/Kheart.jpg"></button>
+            </form>
+        {% elif My3==S13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=S13><img src="../static/img/Kspead.jpg"></button>
+            </form>
+        {% elif My3==D13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=D13><img src="../static/img/Kdaiya.jpg"></button>
+            </form>
+        {% elif My3==C13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=C13><img src="../static/img/Kclover.jpg"></button>
+            </form>
+        {% elif My3==HA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=HA14><img src="../static/img/Aheart.jpg"></button>
+            </form>
+        {% elif My3==SA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=SA14><img src="../static/img/Aspead.jpg"></button>
+            </form>
+        {% elif My3==DA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=DA14><img src="../static/img/Adaiya.jpg"></button>
+            </form>
+        {% else %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My33" value=CA14><img src="../static/img/Aclover.jpg"></button>
+            </form>
+        {% endif %}
+        {% if My4==H2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=H2><img src="../static/img/2heart.jpg"></button>
+            </form>
+        {% elif My4==S2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=S2><img src="../static/img/2spead.jpg"></button>
+            </form>
+        {% elif My4==D2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=D2><img src="../static/img/2daiya.jpg"></button>
+            </form>
+        {% elif My4==C2 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=C2><img src="../static/img/2clover.jpg"></button>
+            </form>
+        {% elif My4==H3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=H3><img src="../static/img/3heart.jpg"></button>
+            </form>
+        {% elif My4==S3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=S3><img src="../static/img/3spead.jpg"></button>
+            </form>
+        {% elif My4==D3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=D3><img src="../static/img/3daiya.jpg"></button>
+            </form>
+        {% elif My4==C3 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=C3><img src="../static/img/3clover.jpg"></button>
+            </form>
+        {% elif My4==H4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=H4><img src="../static/img/4heart.jpg"></button>
+            </form>
+        {% elif My4==S4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=S4><img src="../static/img/4spead.jpg"></button>
+            </form>
+        {% elif My4==D4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=D4><img src="../static/img/4daiya.jpg"></button>
+            </form>
+        {% elif My4==C4 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=C4><img src="../static/img/4clover.jpg"></button>
+            </form>
+        {% elif My4==H5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=H5><img src="../static/img/5heart.jpg"></button>
+            </form>
+        {% elif My4==S5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=S5><img src="../static/img/5spead.jpg"></button>
+            </form>
+        {% elif My4==D5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=D5><img src="../static/img/5daiya.jpg"></button>
+            </form>
+        {% elif My4==C5 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=C5><img src="../static/img/5clover.jpg"></button>
+            </form>
+        {% elif My4==H6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=H6><img src="../static/img/6heart.jpg"></button>
+            </form>
+        {% elif My4==S6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=S6><img src="../static/img/6spead.jpg"></button>
+            </form>
+        {% elif My4==D6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=D6><img src="../static/img/6daiya.jpg"></button>
+            </form>
+        {% elif My4==C6 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=C6><img src="../static/img/6clover.jpg"></button>
+            </form>
+        {% elif My4==H7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=H7><img src="../static/img/7heart.jpg"></button>
+            </form>
+        {% elif My4==S7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=S7><img src="../static/img/7spead.jpg"></button>
+            </form>
+        {% elif My4==D7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=D7><img src="../static/img/7daiya.jpg"></button>
+            </form>
+        {% elif My4==C7 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=C7><img src="../static/img/7clover.jpg"></button>
+            </form>
+        {% elif My4==H8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=H8><img src="../static/img/8heart.jpg"></button>
+            </form>
+        {% elif My4==S8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=S8><img src="../static/img/8spead.jpg"></button>
+            </form>
+        {% elif My4==D8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=D8><img src="../static/img/8daiya.jpg"></button>
+            </form>
+        {% elif My4==C8 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=C8><img src="../static/img/8clover.jpg"></button>
+            </form>
+        {% elif My4==H9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=H9><img src="../static/img/9heart.jpg"></button>
+            </form>
+        {% elif My4==S9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=S9><img src="../static/img/9spead.jpg"></button>
+            </form>
+        {% elif My4==D9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=D9><img src="../static/img/9daiya.jpg"></button>
+            </form>
+        {% elif My4==C9 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=C9><img src="../static/img/9clover.jpg"></button>
+            </form>
+        {% elif My4==H10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=H10><img src="../static/img/10heart.jpg"></button>
+            </form>
+        {% elif My4==S10%}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=S10><img src="../static/img/10spead.jpg"></button>
+            </form>
+        {% elif My4==D10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=D10><img src="../static/img/10daiya.jpg"></button>
+            </form>
+        {% elif My4==C10 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=C10><img src="../static/img/10clover.jpg"></button>
+            </form>
+        {% elif My4==H11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=H11><img src="../static/img/Jheart.jpg"></button>
+            </form>
+        {% elif My4==S11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=S11><img src="../static/img/Jspead.jpg"></button>
+            </form>
+        {% elif My4==D11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=D11><img src="../static/img/Jdaiya.jpg"></button>
+            </form>
+        {% elif My4==C11 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=C11><img src="../static/img/Jclover.jpg"></button>
+            </form>
+        {% elif My4==H12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=H12><img src="../static/img/Qheart.jpg"></button>
+            </form>
+        {% elif My4==S12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=S12><img src="../static/img/Qspead.jpg"></button>
+            </form>
+        {% elif My4==D12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=D12><img src="../static/img/Qdaiya.jpg"></button>
+            </form>
+        {% elif My4==C12 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=C12><img src="../static/img/Qclover.jpg"></button>
+            </form>
+        {% elif My4==H13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=H13><img src="../static/img/Kheart.jpg"></button>
+            </form>
+        {% elif My4==S13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=S13><img src="../static/img/Kspead.jpg"></button>
+            </form>
+        {% elif My4==D13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=D13><img src="../static/img/Kdaiya.jpg"></button>
+            </form>
+        {% elif My4==C13 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=C13><img src="../static/img/Kclover.jpg"></button>
+            </form>
+        {% elif My4==HA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=HA14><img src="../static/img/Aheart.jpg"></button>
+            </form>
+        {% elif My4==SA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=SA14><img src="../static/img/Aspead.jpg"></button>
+            </form>
+        {% elif My4==DA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=DA14><img src="../static/img/Adaiya.jpg"></button>
+            </form>
+        {% elif My4==CA14 %}
+            <form action="start1" method="POST" style="display: inline">
+                <button type="submit" name="My44" value=CA14><img src="../static/img/Aclover.jpg"></button>
+            </form>
+        {% else %}
+        {% endif %}
+            <form action="result" method="POST" style="display: inline">
+                <input type="submit" name="result" value="送信">
+            </form>
+    </body>
+</html>
