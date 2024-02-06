@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\かおりん\Desktop\修了演習pythonプログラム\.venv"
+VIRTUAL_ENV="C:\Users\かおりん\Desktop\poker\.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
