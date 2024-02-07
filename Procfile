@@ -1,1 +1,1 @@
-web: gunicorn poker.app
+web: gunicorn poker:app
