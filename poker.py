@@ -415,7 +415,8 @@ def miinya():
     wb.save("card.xlsx")
     return render_template("miinya.html")
 
-app.run()
+if __name__=="__main__":
+    app.run(debug=True)
 
 
     
