@@ -1,1 +1,1 @@
-web: python poker.py 
+web: gunicorn poker.app
